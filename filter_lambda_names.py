@@ -1,5 +1,1 @@
-list1 = ["Bob", "Amanda", "Johnny"]
-
-
-
-print(list(filter(lambda x: x[0] == "A" or "a",list1 )))
+print(list(filter(lambda x: x[0] == "A" or x[0] == "a", ["Jhud", "Bob", "aman", "Amanda"])))
