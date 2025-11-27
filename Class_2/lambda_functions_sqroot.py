@@ -1,0 +1,1 @@
+print(list(filter(lambda x: x**0.5, [25, 64, 9, 4, 121, 144])))
