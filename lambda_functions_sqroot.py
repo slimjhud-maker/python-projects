@@ -1,0 +1,1 @@
+print(list(filter(lambda x: x % 2 == 0, [25, 64, 9, 4, 121, 144])))
