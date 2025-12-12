@@ -1,0 +1,5 @@
+Jhud,password
+Bob,bobiscool
+John,1234
+ca;a;ca,& C:/Users/raghd/OneDrive/Desktop/python_projects/.venv/Scripts/python.exe "c:/Users/raghd/OneDrive/Desktop/python_projects/New projects/login_and_signup_system.py"
+Jones,babyjones
