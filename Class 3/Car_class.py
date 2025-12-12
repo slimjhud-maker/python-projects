@@ -4,6 +4,8 @@ class Car:
         self.brand = input("What brand is your car? ")
         self.model = input("What model is your car? ")
         self.year = input("What year was your car made? ")
+    def __del__(self):
+        print("Destructer was called to clean the RAM")
     def drive(self):
         print(self.car, "is driving down a road")
     def brake(self):

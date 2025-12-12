@@ -2,6 +2,8 @@ class Human:
     def __init__(self, nameX, ageX):
         self.name = nameX
         self.age = ageX
+    def __del__(self):
+        print("Destructer was called to clean the RAM")
     def eat(self):
         print(self.name, "is eating a meal")
 
