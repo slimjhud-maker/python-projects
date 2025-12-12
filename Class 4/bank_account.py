@@ -4,7 +4,7 @@ class Bank:
         self.acc_name = acc_nameX
         self.balance = balanceX
     def __del__(self):
-        print("Destructer was called to clean the RAM")
+        print("Destructor was called to clean the RAM")
     def deposit(self):
         money_add = int(input("How much money would you like to deposit? "))
         self.balance += money_add

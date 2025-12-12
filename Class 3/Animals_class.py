@@ -5,7 +5,7 @@ class Animal:
         self.sound = input("What sound does your animal make? ")
         self.prey = input("What prey is your animal hunting? ")
     def __del__(self):
-        print("Destructer was called to clean the RAM")
+        print("Destructor was called to clean the RAM")
     def hunt(self):
         print("The", self.name, "is hunting the", self.prey)
     def make_sound(self):

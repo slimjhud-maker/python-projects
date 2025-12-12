@@ -3,7 +3,7 @@ class Human:
         self.name = nameX
         self.age = ageX
     def __del__(self):
-        print("Destructer was called to clean the RAM")
+        print("Destructor was called to clean the RAM")
     def eat(self):
         print(self.name, "is eating a meal")
 

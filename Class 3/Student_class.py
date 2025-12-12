@@ -4,7 +4,7 @@ class Student:
         self.grade = input("Enter student grade: ")
         self.subject = input("Enter student subject: ")
     def __del__(self):
-        print("Destructer was called to clean the RAM")
+        print("Destructor was called to clean the RAM")
 
     def study(self):
         print("Choose a study activity:")
