@@ -1,4 +1,3 @@
-
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -8,20 +7,37 @@ class Book:
         print("Book:", self.title, "by", self.author)
 
 
+
 class EBook(Book):
+    def __init__(self, title, author, downloadable):
+        super().__init__(title, author)
+        self.downloadable = downloadable
+
     def show_info(self):
-        print("EBook:", self.title, "by", self.author)
+        print(f"EBook: {self.title} by {self.author} | Downloadable: {self.downloadable}")
 
     def download(self):
-        print(self.title, "is downloading...")
+        if self.downloadable.lower() == "yes":
+            print(self.title, "is downloading...")
+        else:
+            print(self.title, "is NOT downloadable.")
+
 
 
 class AudioBook(Book):
+    def __init__(self, title, author, has_sample):
+        super().__init__(title, author)
+        self.has_sample = has_sample
+
     def show_info(self):
-        print("AudioBook:", self.title, "by", self.author)
+        print(f"AudioBook: {self.title} by {self.author} | Sample Available: {self.has_sample}")
 
     def play_sample(self):
-        print("Playing sample of", self.title)
+        if self.has_sample.lower() == "yes":
+            print("Playing sample of", self.title)
+        else:
+            print("No sample available for", self.title)
+
 
 
 class Library:
@@ -46,11 +62,12 @@ class Library:
             book.show_info()
 
 
+
 library = Library()
 
 b1 = Book("Harry Potter", "J.K. Rowling")
-b2 = EBook("Python 101", "John Doe")
-b3 = AudioBook("Lord of the Rings", "J.R.R. Tolkien")
+b2 = EBook("Python 101", "John Doe", "yes")
+b3 = AudioBook("Lord of the Rings", "J.R.R. Tolkien", "no")
 
 library.add_book(b1)
 library.add_book(b2)

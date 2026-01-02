@@ -22,14 +22,23 @@ class Employee:
         print("Basic Salary:", self.basic_salary)
 
 
+
 class Manager(Employee):
+    def __init__(self, name, emp_id, basic_salary):
+        super().__init__(name, emp_id, basic_salary)
+
     def show_role(self):
         print("Role: Manager")
 
 
+
 class Developer(Employee):
+    def __init__(self, name, emp_id, basic_salary):
+        super().__init__(name, emp_id, basic_salary)
+
     def show_role(self):
         print("Role: Developer")
+
 
 
 m = Manager("Jhud", 101, 5000)
