@@ -15,11 +15,16 @@ bg = None
 bgImgPath = r"\Flappy Bird Assets\bg.png"
 groundImgPath = r"\Flappy Bird Assets\ground.png"
 flappyImgPath = r"\Flappy Bird Assets\bird"
+obstacleImgPath = r"\Flappy Bird Assets\pipe.png"
 
 ground = None
 groundx = 0
 groundy = 0
 groundspeed = 5
 
+pipeSpawnSpeed = 1200
+
 flappy = None
 playerGr = pygame.sprite.Group()
+
+obstacleGr = pygame.sprite.Group()
