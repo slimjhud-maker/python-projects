@@ -18,6 +18,9 @@ def blitGameComponents():
     blitground()
     s.playerGr.draw(s.screen)
 
+    textRender = s.font.render(f"Score: {s.score//15}", True, "black")
+    s.screen.blit(textRender, (10,10))
+
 def blitground():
     y = s.groundy
     w = s.ground.get_width()
@@ -31,6 +34,10 @@ def drawObstacles():
 def checkCollision():
     logicflappy = s.flappy
     for obs in s.obstacleGr:
+        if s.flappy.rect.left > obs.topRect.right:
+            s.score +=1
+
+            
         offsetTop = (obs.topRect.x - logicflappy.rect.x, obs.topRect.y - logicflappy.rect.y)
         offsetBottom = (obs.bottomRect.x - logicflappy.rect.x, obs.bottomRect.y - logicflappy.rect.y)
 
@@ -38,3 +45,5 @@ def checkCollision():
             s.gameon = False
         if logicflappy.mask.overlap(obs.bottomMask, offsetBottom):
             s.gameon = False
+
+

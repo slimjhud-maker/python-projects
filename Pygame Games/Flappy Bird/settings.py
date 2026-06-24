@@ -1,5 +1,7 @@
 import pygame, os
 
+pygame.init()
+
 screenwidth = 900
 screenheight = 500
 
@@ -28,3 +30,6 @@ flappy = None
 playerGr = pygame.sprite.Group()
 
 obstacleGr = pygame.sprite.Group()
+
+score = 0
+font = pygame.font.Font(None, 30)
