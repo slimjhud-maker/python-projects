@@ -36,7 +36,9 @@ while s.running:
                     s.gameon = True
 
         if event.type == SPAWNPIPE and s.gameon:
-            s.obstacleGr.add(o.Obstacle())
+            obs = o.Obstacle()
+            s.obstacleGr.add(obs)
+            s.templist.append(obs)
 
     if s.gameon:
         g.moveOnGameStarts()

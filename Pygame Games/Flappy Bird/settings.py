@@ -33,3 +33,5 @@ obstacleGr = pygame.sprite.Group()
 
 score = 0
 font = pygame.font.Font(None, 30)
+
+templist = []
