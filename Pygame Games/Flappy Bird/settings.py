@@ -35,3 +35,5 @@ score = 0
 font = pygame.font.Font(None, 30)
 
 templist = []
+
+databasePath = DIR + r"\flappy_database.db"
