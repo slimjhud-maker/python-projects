@@ -28,13 +28,22 @@ def sign_up(userID, password):
         cursor.execute("INSERT INTO users(userID, password) VALUES(?, ?)", (userID, password))
         connection.commit()
         print("username acceptable")
-    except Exception as e:
+        connection.commit()
+        return True
+    except sql.IntegrityError as e:
         print("username already in use")
+        return False
+    
 
 
-def sign_in():
-    pass
-    # connection.commit()
+def sign_in(userID, password):
+    cursor.execute("SELECT userID FROM users WHERE userID = ? AND password = ?", (userID, password))
+    user = cursor.fetchone()
+    if user:
+        return user[0]
+    else:
+        return None
+    
 
 
 def save_score():
